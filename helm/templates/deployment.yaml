@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name}}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.label }} 
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.label }}
+    spec:      
+      containers: 
+      - name: {{ .Values.name}}
+        {{- with .Values.environmentvariable }}
+        env:
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+        ports:
+        - containerPort: {{ .Values.containerPort}}
+      # nodeSelector:
+      #   node: "3"
+      {{- if .Values.persistence.enabled }}     
+        volumeMounts:
+          - mountPath: {{ .Values.volume.mount}}
+            name: {{ .Values.volume.name}}      
+      volumes:
+        - name: {{ .Values.volume.name}}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.name}}
+      {{- end }}
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 0           
+
