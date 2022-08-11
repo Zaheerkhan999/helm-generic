@@ -94,7 +94,7 @@ persistence:
 
 volume:
     name: data
-    mount: /bitnami/mediawiki
+    mount: /bitnami/apache
     
 
   
