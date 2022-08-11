@@ -112,13 +112,6 @@ environmentvariable:
     value: 'yes'
   - name: ALLOW_EMPTY_PASSWORD
     value: 'yes'
-
-
-
-    environment:
-      - MEDIAWIKI_DATABASE_USER=bn_mediawiki
-      - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
-      - ALLOW_EMPTY_PASSWORD=yes
     
 
   
