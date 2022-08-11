@@ -40,13 +40,13 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   sourceport: 80
   targetport: 80
   name: media-wiki-svc
 
 ingress:
-  enabled: true
+  enabled: false
   className: nginx
   annotations:
     # kubernetes.io/ingress.class: nginx
