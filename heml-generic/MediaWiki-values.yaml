@@ -7,7 +7,7 @@ replicaCount: 1
 label: mediawiki-instance
 name: media-wiki
 image:
-  repository: mediawiki
+  repository: bitnami/mediawiki
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest" 
@@ -94,7 +94,7 @@ persistence:
 
 volume:
     name: data
-    mount: /var/www/html/images
+    mount: /bitnami/mediawiki
     
 
   
