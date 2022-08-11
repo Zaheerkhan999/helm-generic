@@ -95,6 +95,30 @@ persistence:
 volume:
     name: data
     mount: /bitnami/apache
+
+
+envvariable:
+  enabled: true
+environmentvariable:         
+  - name: MEDIAWIKI_DATABASE_USER
+    value: bn_mediawiki
+  - name: MEDIAWIKI_DATABASE_NAME
+    value: bitnami_mediawiki
+  - name: ALLOW_EMPTY_PASSWORD
+    value: 'yes'
+  - name: MEDIAWIKI_DATABASE_PASSWORD
+    value: testing
+  - name: MYSQL_RANDOM_ROOT_PASSWORD
+    value: 'yes'
+  - name: ALLOW_EMPTY_PASSWORD
+    value: 'yes'
+
+
+
+    environment:
+      - MEDIAWIKI_DATABASE_USER=bn_mediawiki
+      - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
+      - ALLOW_EMPTY_PASSWORD=yes
     
 
   
