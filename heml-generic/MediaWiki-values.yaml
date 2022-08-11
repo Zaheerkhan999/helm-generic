@@ -94,11 +94,11 @@ persistence:
 
 volume:
     name: data
-    mount: /bitnami/apache
+    mount: /var/www/html
 
 
 envvariable:
-  enabled: true
+  enabled: false
 environmentvariable:         
   - name: MEDIAWIKI_DATABASE_USER
     value: bn_mediawiki
