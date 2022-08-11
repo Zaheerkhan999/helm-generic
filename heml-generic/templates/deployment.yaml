@@ -6,18 +6,20 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Values.label }} 
+      app: {{ .Values.name }}-instance 
   template:
     metadata:
       labels:
-        app: {{ .Values.label }}
+        app: {{ .Values.name }}-instance
     spec:      
       containers: 
       - name: {{ .Values.name}}
+      {{- if .Values.ingress.enabled }}
         {{- with .Values.environmentvariable }}
         env:
         {{- toYaml . | nindent 8 }}
         {{- end }}
+      {{- end }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         resources:
             {{- toYaml .Values.resources | nindent 12 }}

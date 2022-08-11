@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.service.name}}  
+  name: {{ .Values.name}}-svc
 spec:
   selector:
-    app: {{ .Values.label }}
+    app: {{ .Values.name }}-instance
   ports:
   - port: {{ .Values.service.sourceport}}
     targetPort: {{ .Values.service.targetport}}
