@@ -3,7 +3,7 @@ entries:
   generic-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-08-12T20:03:40.9310337+05:30"
+    created: "2022-08-12T20:22:35.8479604+05:30"
     description: A Helm chart for Kubernetes
     digest: 99c447eb8c705b5ff8b6cc882c6139c09049ca130f6eb1086e09bf76084043f9
     name: generic-chart
@@ -11,4 +11,15 @@ entries:
     urls:
     - https://zaheerkhan999.github.io/helm-generic/generic-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-12T20:03:40.9304218+05:30"
+  helm-chart-test:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-12T20:22:35.8485719+05:30"
+    description: A Helm chart for Kubernetes
+    digest: cde8f4ea03d7c0681045a237b4c349812f8066b7ef441395f478d84b8ab9fbe4
+    name: helm-chart-test
+    type: application
+    urls:
+    - https://zaheerkhan999.github.io/helm-generic/helm-chart-test-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-12T20:22:35.8448988+05:30"
