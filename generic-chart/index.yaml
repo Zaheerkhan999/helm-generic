@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  generic-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-12T18:11:38.2731118+05:30"
+    description: A Helm chart for Kubernetes
+    digest: a59478fa9fc49f7796a9b3c4b2534b3a013a892f471d8edfe3b7a37522fbdd47
+    name: generic-chart
+    type: application
+    urls:
+    - generic-chart/generic-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-12T18:11:38.272568+05:30"
