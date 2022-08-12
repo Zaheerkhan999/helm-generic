@@ -97,7 +97,7 @@ volume:
 
 
 envvariable:
-  enabled: false
+  enabled: true
 environmentvariable:         
   - name: MEDIAWIKI_DATABASE_USER
     value: bn_mediawiki
@@ -111,6 +111,11 @@ environmentvariable:
     value: 'yes'
   - name: ALLOW_EMPTY_PASSWORD
     value: 'yes'
+
+
+favorite:
+  drink: coffee
+  food: sandwich
     
 
   

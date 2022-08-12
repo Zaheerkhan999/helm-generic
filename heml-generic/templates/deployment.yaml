@@ -14,7 +14,7 @@ spec:
     spec:      
       containers: 
       - name: {{ .Values.name}}
-      {{- if .Values.ingress.enabled }}
+      {{- if .Values.envvariable.enabled }}
         {{- with .Values.environmentvariable }}
         env:
         {{- toYaml . | nindent 8 }}
@@ -25,8 +25,8 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
         ports:
         - containerPort: {{ .Values.containerPort}}
-      # nodeSelector:
-      #   node: "3"
+      {{- /* nodeSelector:
+         node: "3" */ -}}
       {{- if .Values.persistence.enabled }}     
         volumeMounts:
           - mountPath: {{ .Values.volume.mount}}
