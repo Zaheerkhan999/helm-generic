@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  helm-ngnix:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-12T17:57:39.5332271+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 85e60b61604e3ba5264464b47741cc78848e82759df666a907a8a49aeb61afdf
+    name: helm-ngnix
+    type: application
+    urls:
+    - generic-chart/helm-ngnix-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-12T17:57:39.5326697+05:30"
