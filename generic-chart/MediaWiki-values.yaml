@@ -90,7 +90,6 @@ persistence:
     enabled: true    
     storage: 20Gi
     storageclassname: azurefile-csi
-
 volume:
     name: data
     mount: /var/www/html
